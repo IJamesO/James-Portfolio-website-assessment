@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Osaretin James Igbe</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+<header class="dark-header">
+  <h1>Contact Me</h1>
+  <nav>
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="skills.html" class="nav-btn">Skills</a>
+    <a href="showcase.html" class="nav-btn">Showcase</a>
+    <a href="problem.html" class="nav-btn">Problem Solving</a>
+    <a href="contact.html" class="nav-btn active">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="contact dark-contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Get in Touch</h2>
+    <p>If you’d like to collaborate, discuss opportunities, or learn more about my work, feel free to contact me using the form below or through the following channels:</p>
+
+    <div class="contact-info" role="list">
+      <div class="contact-item" role="listitem">
+        <img src="images/mail.jpg" alt="Email icon" class="icon" aria-hidden="true">
+        <a href="mailto:s.o.igbe@edu.salford.ac.uk">s.o.igbe@edu.salford.ac.uk</a>
+      </div>
+
+      <div class="contact-item" role="listitem">
+        <img src="images/linkedin.jpg" alt="LinkedIn icon" class="icon" aria-hidden="true">
+        <a href="https://www.linkedin.com/in/osaretin-james-igbe-903079292" target="_blank" rel="noopener">
+          Osaretin James Igbe
+        </a>
+      </div>
+
+      <div class="contact-item" role="listitem">
+        <img src="images/github.png" alt="Github icon" class="icon" aria-hidden="true">
+        <a href="https://github.com/IJamesO" target="_blank" rel="noopener">
+          My Github page
+        </a>
+      </div>
+    </div>
+
+    <form id="contactForm" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" required aria-required="true">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required aria-required="true">
+
+      <label for="message">Message</label>
+      <textarea id="message" required aria-required="true"></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+      <p id="formFeedback" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="dark-footer">
+  <p>© 2025 Osaretin James Igbe</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem Solving | Restaurant Case Study</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header -->
+<header class="dark-header">
+  <h1>Restaurant Digital Transformation Scenario</h1>
+  <nav>
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="skills.html" class="nav-btn">Skills</a>
+    <a href="showcase.html" class="nav-btn">Showcase</a>
+    <a href="problem.html" class="nav-btn active">Problem Solving</a>
+    <a href="contact.html" class="nav-btn">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="dark-hero" style="background-image: url('images/restaurant-bg.jpg');" role="banner">
+  <div class="overlay">
+    <h2>Restaurant Digital Transformation</h2>
+    <p>As CTO, your mission is to build a digital solution to boost customer engagement, online presence, and booking efficiency for a growing local restaurant.</p>
+  </div>
+</section>
+ 
+<!-- MENU SECTION -->
+<section class="menu-section">
+    <h2>Business Context</h2>
+    <p>In today’s fast-paced hospitality industry, restaurants need an innovative online platform that offers seamless table booking, 
+      personalized customer interaction, and effective feedback management. This case study explores how strategic technology solutions 
+      can drive digital growth and operational efficiency.</p>
+    <h2>Afrovibez Restaurant Menu</h2>
+    <p class="menu-subtext">Our chef-crafted selection of dishes and refreshing beverages.</p>
+  
+    <div class="menu-grid">
+      <!-- DISHES -->
+      <div class="menu-category">
+        <h3 class="menu-title">Featured Dishes</h3>
+        <div class="menu-items">
+          <div class="menu-card">
+            <img src="images/Jollof.jpg" alt="Jollof Rice" class="menu-img">
+            <h4>Jollof Rice with preferred meat</h4>
+            <p>Spiced tomato-based rice dish, iconic across West Africa.</p>
+            <span class="price">£18</span>
+          </div>
+          <div class="menu-card">
+            <img src="images/couscous.jpg" alt="Couscous" class="menu-img">
+            <h4>Couscous (North Africa)</h4>
+            <p>Steamed semolina served with vegetables, lamb, or chicken.</p>
+            <span class="price">£17.50</span>
+          </div>
+          <div class="menu-card">
+            <img src="images/bunnychow.jpg" alt="Bunny Chow" class="menu-img">
+            <h4>Bunny Chow (South Africa)</h4>
+            <p>Hollowed bread loaf stuffed with curry.</p>
+            <span class="price">£15</span>
+          </div>
+          <div class="menu-card">
+            <img src="images/injera.jpg" alt="Injera with Doro Wat" class="menu-img">
+            <h4>Injera with Doro Wat (Ethiopia)</h4>
+            <p>Sourdough flatbread served with spicy chicken stew.</p>
+            <span class="price">£16.99</span>
+          </div>
+          <div class="menu-card">
+            <img src="images/poundedyam.jpg" alt="Pounded Yam & Egusi Soup" class="menu-img">
+            <h4>Pounded Yam & Egusi Soup</h4>
+            <p>Thick yam dough served with melon-seed based soup.</p>
+            <span class="price">£18.99</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DRINKS -->
+      <div class="menu-category">
+        <h3 class="menu-title">Signature Drinks</h3>
+        <div class="menu-items">
+          <div class="menu-card">
+            <img src="images/zobo.jpg" alt="Zobo Hibiscus Drink" class="menu-img">
+            <h4>Hibiscus Tea (Zobo / Bissap)</h4>
+            <p>Made from hibiscus petals; served hot or cold.</p>
+            <span class="price">£2.50</span>
+          </div>
+          <div class="menu-card">
+            <img src="images/palmwine.jpg" alt="Palm Wine Drink" class="menu-img">
+            <h4>Palm Wine</h4>
+            <p>Traditional fermented drink tapped from palm trees.</p>
+            <span class="price">£4.20</span>
+          </div>
+          <div class="menu-card">
+            <img src="images/tigernut.jpg" alt="Tiger Nut Drink" class="menu-img">
+            <h4>Tiger Nut Milk (Kúnú Aya)</h4> 
+            <p>Sweet, milky drink made from blended tiger nuts.</p>
+            <span class="price">£5.80</span>
+          </div>
+          <div class="menu-card">
+            <img src="images/amarula.jpg" alt="Amarula Drink" class="menu-img">
+            <h4>Amarula (South Africa)</h4>
+            <p>Cream liqueur from the marula fruit.</p>
+            <span class="price">£5.00</span>
+          </div>
+          <div class="menu-card">
+            <img src="images/water.jpg" alt="Sparkling Water" class="menu-img">
+            <h4>Sparkling Mineral Water</h4>
+            <p>Pure, refreshing, and lightly carbonated.</p>
+            <span class="price">£1.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- BOOKING FORM SECTION -->
+  <section class="booking-section">
+    <h2>Reserve a Table</h2>
+    <p class="booking-subtext">Book your perfect dining experience at Afrovibez Restaurant.</p>
+
+    <form class="booking-form" id="bookingForm" novalidate>
+      <div class="form-group">
+        <label for="bdate">Date</label>
+        <input type="date" id="bdate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="btime">Time</label>
+        <input type="time" id="btime" required>
+      </div>
+
+      <div class="form-group">
+        <label for="bpeople">Number of People</label>
+        <input type="number" id="bpeople" min="1" max="20" required>
+      </div>
+
+      <div class="form-group">
+        <label for="bname">Full Name</label>
+        <input type="text" id="bname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="bemail">Email Address</label>
+        <input type="email" id="bemail" required>
+      </div>
+
+      <button type="submit" class="btn booking-btn">Confirm Booking</button>
+      <p id="bookingFeedback" role="status" aria-live="polite"></p>
+    </form>
+</section>
+
+<!-- CONTACT DETAILS SECTION -->
+<section class="problem-contact-section" aria-labelledby="contact-heading">
+  <h2>Contact Details</h2>
+  <div class="problem-contact-grid">
+
+    <div class="problem-contact-card">
+      <img src="images/mail.jpg" alt="Email icon">
+      <h3>Email</h3>
+      <p><a href="mailto:s.o.igbe@edu.salford.ac.uk">s.o.igbe@edu.salford.ac.uk</a></p>
+    </div>
+
+    <div class="problem-contact-card">
+      <img src="images/linkedin.jpg" alt="LinkedIn icon">
+      <h3>LinkedIn</h3>
+      <p>
+        <a href="https://www.linkedin.com/in/osaretin-james-igbe-903079292" target="_blank" rel="noopener">
+          Osaretin James Igbe
+        </a>
+      </p>
+    </div>
+
+    <div class="problem-contact-card">
+      <img src="images/phone.png" alt="Phone icon">
+      <h3>Phone</h3>
+      <p>+44 712 345 678</p>
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="dark-footer">
+  <p>© 2025 Afrovibez — Prototype by Osaretin James Igbe</p>
+</footer>
+</body>
+</html>

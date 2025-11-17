@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Showcase</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+<!-- Header -->
+<header class="dark-header">
+  <h1>Business Showcase</h1>
+  <nav>
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="skills.html" class="nav-btn">Skills</a>
+    <a href="showcase.html" class="nav-btn active">Showcase</a>
+    <a href="problem.html" class="nav-btn">Problem Solving</a>
+    <a href="contact.html" class="nav-btn">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="dark-hero" style="background-image: url('images/creativity.jpg');" role="banner">
+  <div class="overlay">
+    <h2>Showcasing Innovation and Creativity</h2>
+    <p>Explore key projects that demonstrate my technical, business, and creative expertise in technology and leadership.</p>
+  </div>
+</section>
+
+<!-- Showcase Grid -->
+<section class="dark-header">
+  <h2>Projects</h2>
+  <div class="cert-grid">
+    <!-- Project 1 -->
+    <div class="cert-card" role="button" tabindex="0" onclick="openLightbox('project1')">
+      <img src="images/dashboard-icon.jpg" alt="Dashboard Project">
+      <h3>Business Intelligence Dashboard</h3>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="cert-card" role="button" tabindex="0" onclick="openLightbox('project2')">
+      <img src="images/webapp-icon.jpg" alt="Web App Project">
+      <h3>Web Application Prototype</h3>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="cert-card" role="button" tabindex="0" onclick="openLightbox('project3')">
+      <img src="images/team-icon.jpg" alt="Leadership Project">
+      <h3>Leadership & Media Coordination</h3>
+    </div>
+  </div>
+</section>
+
+<!-- Lightboxes -->
+<div id="project1" class="lightbox" onclick="closeLightbox(event, 'project1')" aria-hidden="true">
+  <div class="lightbox-content" role="dialog" aria-modal="true">
+    <p class="lightbox-progress"></p>
+    <h3>Business Intelligence Dashboard</h3>
+    <img src="images/dashboard-icon.jpg" alt="Dashboard Project">
+    <p>As the developer, i came up with an interactive Power Bi dashboard using different tables and charts to visualize business performance metrics, improving data-driven decision making.
+      Through my solution, the dashboard gave a clearer overview on how to read and utilise the data more efficiently.
+    </p>
+    <button class="close-btn" onclick="closeLightbox(event, 'project1')">Close</button>
+  </div>
+</div>
+
+<div id="project2" class="lightbox" onclick="closeLightbox(event, 'project2')" aria-hidden="true">
+  <div class="lightbox-content" role="dialog" aria-modal="true">
+    <p class="lightbox-progress"></p>
+    <h3>Web Application Prototype</h3>
+    <img src="images/webapp-icon.jpg" alt="Web App Project">
+    <p>As the designer in this project, i came up with the design idea and built a prototype web app using HTML, CSS, PHP, and SQL for dynamic data management and database interaction
+      making it as interactive as possible
+    </p>
+    <button class="close-btn" onclick="closeLightbox(event, 'project2')">Close</button>
+  </div>
+</div>
+
+<div id="project3" class="lightbox" onclick="closeLightbox(event, 'project3')" aria-hidden="true">
+  <div class="lightbox-content" role="dialog" aria-modal="true">
+    <p class="lightbox-progress"></p>
+    <h3>Leadership & Media Coordination</h3>
+    <img src="images/team-icon.jpg" alt="Leadership Project">
+    <p>As the leader of the media department and youth group, i directed programs at my local church called RCCG, organizing live streams and community events while fostering leadership and collaboration.
+      And with the help of my fellow colleagues and some leaders in the church, all the events and programs were successful and all the tasks assigned to me,
+      were carried out with diligence.
+    </p>
+    <button class="close-btn" onclick="closeLightbox(event, 'project3')">Close</button>
+  </div>
+</div>
+
+<!-- DESIGN CONCEPT SECTION -->
+<section class="dark-section" data-reveal>
+  <h2 class="center-text">Problem-Solving Page – Design Concept</h2>
+
+  <div class="concept-container">
+    <p>
+      The Problem-Solving Page was designed to simulate a realistic digital transformation solution 
+      for a restaurant business. Its structure guides the user through a clear journey, beginning 
+      with the business context, followed by a visually engaging menu display, and concluding with 
+      an interactive reservation form.
+    </p>
+
+    <h3>1. Purpose & Structure</h3>
+    <p>
+      The layout mirrors modern restaurant websites by presenting context, services, and interactive 
+      tools in a logical order. The menu section uses visual card layouts to resemble digital ordering 
+      systems, while the booking form represents a functional reservation interface.
+    </p>
+
+    <h3>2. Visual & UX Design Approach</h3>
+    <p>
+      Consistency, readability, and accessibility guided the design theme. A dark background combined 
+      with bright highlight colours improves contrast and visual focus. All components maintain spacing 
+      and styling consistent with the rest of the portfolio for a unified experience.
+    </p>
+
+    <h3>3. Interactive Components</h3>
+    <p>
+      Hover effects, image-based menu cards, scroll reveal animations, and form validation demonstrate 
+      practical user-experience features. These mimic real digital platforms and reinforce the concept 
+      of interactive transformation in hospitality.
+    </p>
+
+    <h3>4. Real-World Applicability</h3>
+    <p>
+      The page models how restaurants use digital tools to improve customer engagement, highlight 
+      products, and streamline operations. By integrating dynamic visuals and functional components, 
+      the design shows an understanding of how technology enhances business processes.
+    </p>
+
+    <h3>5. Why This Design Works</h3>
+    <p>
+      The combination of structured content, strong UX principles, and interactive behaviour results 
+      in a professional digital solution. It aligns with industry standards and satisfies the brief’s 
+      emphasis on innovation, technology usage, and user-focused design.
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="dark-footer">
+  <p>&copy; 2025 Osaretin James Igbe. All rights reserved.</p>
+</footer>
+</body>
+</html>

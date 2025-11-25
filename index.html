@@ -53,12 +53,46 @@
 <!-- COOKIE CONSENT BANNER -->
 <div id="cookieBanner" class="cookie-banner" role="dialog" aria-live="polite">
   <p>
-    This website uses cookies to improve your browsing experience.
+    This website uses cookies to improve your experience. You can accept all cookies or manage your preferences.
   </p>
-  <button id="acceptCookies" class="nav-btn">Accept</button>
-  <button id="denyCookies" class="close-btn">Deny</button>
+  <div class="cookie-buttons">
+    <button id="acceptCookies" class="nav-btn">Accept All</button>
+    <button id="manageCookies" class="close-btn">Manage Cookies</button>
+    <button id="denyCookies" class="close-btn">Reject All</button>
+  </div>
 </div>
+
+<!-- COOKIE PREFERENCES POPUP -->
+<div id="cookiePopup" class="cookie-popup">
+  <div class="cookie-popup-content">
+    <h2>Cookie Preferences</h2>
+
+    <p>Manage your cookie choices below.</p>
+
+    <label class="cookie-option">
+      <input type="checkbox" id="necessaryCookies" checked disabled>
+      <span>Necessary Cookies (Always Active)</span>
+    </label>
+
+    <label class="cookie-option">
+      <input type="checkbox" id="analyticsCookies">
+      <span>Analytics Cookies</span>
+    </label>
+
+    <label class="cookie-option">
+      <input type="checkbox" id="marketingCookies">
+      <span>Marketing Cookies</span>
+    </label>
+
+    <div class="popup-buttons">
+      <button id="savePreferences" class="nav-btn">Save Preferences</button>
+      <button id="closePopup" class="close-btn">Close</button>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
+
 
 

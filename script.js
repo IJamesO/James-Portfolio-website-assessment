@@ -261,3 +261,63 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("cookieSettings", JSON.stringify(settings));
     }
 });
+
+
+// ------------------------------------------------------
+// CONTACT FORM VALIDATION
+// ------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    if (!form) return; // Prevent errors on pages without the form
+
+    const nameField = document.getElementById("name");
+    const emailField = document.getElementById("email");
+    const messageField = document.getElementById("message");
+    const feedback = document.getElementById("formFeedback");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let isValid = true;
+
+        // Reset previous error states
+        [nameField, emailField, messageField].forEach(field => {
+            field.classList.remove("error");
+        });
+        feedback.textContent = "";
+        feedback.className = "";
+
+        // Validate Name
+        if (nameField.value.trim().length < 2) {
+            nameField.classList.add("error");
+            isValid = false;
+        }
+
+        // Validate Email Format
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailField.value.trim())) {
+            emailField.classList.add("error");
+            isValid = false;
+        }
+
+        // Validate Message
+        if (messageField.value.trim().length < 10) {
+            messageField.classList.add("error");
+            isValid = false;
+        }
+
+        // If not valid, show message
+        if (!isValid) {
+            feedback.textContent = "Please fill out all fields correctly.";
+            feedback.classList.add("error");
+            return;
+        }
+
+        // Valid submission message
+        feedback.textContent = "Message sent successfully!";
+        feedback.classList.add("success");
+
+        // Optional: Clear form
+        form.reset();
+    });
+});

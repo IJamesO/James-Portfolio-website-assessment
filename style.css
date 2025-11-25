@@ -473,4 +473,30 @@ input.error, textarea.error {
   font-weight: 600;
 }
 
+/* Scrollable privacy text */
+.privacy-text {
+  max-height: 250px; /* adjust as needed */
+  overflow-y: auto;
+  margin-top: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  padding-right: 0.5rem; /* space for scrollbar */
+}
+
+/* Optional scrollbar styling */
+.privacy-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.privacy-text::-webkit-scrollbar-thumb {
+  background-color: #ffb400;
+  border-radius: 3px;
+}
+
+.privacy-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
 

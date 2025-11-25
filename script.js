@@ -199,26 +199,65 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// COOKIE CONSENT LOGIC ------------------------------------
+// --------------------- COOKIE CONSENT SYSTEM -----------------------
 document.addEventListener("DOMContentLoaded", () => {
     const banner = document.getElementById("cookieBanner");
-    const acceptBtn = document.getElementById("acceptCookies");
-    const denyBtn = document.getElementById("denyCookies");
+    const popup = document.getElementById("cookiePopup");
 
-    // Check if cookie already set
-    if (!localStorage.getItem("cookieConsent")) {
-        banner.style.display = "block";
+    const acceptAllBtn = document.getElementById("acceptCookies");
+    const denyAllBtn = document.getElementById("denyCookies");
+    const manageBtn = document.getElementById("manageCookies");
+
+    const savePreferencesBtn = document.getElementById("savePreferences");
+    const closePopupBtn = document.getElementById("closePopup");
+
+    const analyticsBox = document.getElementById("analyticsCookies");
+    const marketingBox = document.getElementById("marketingCookies");
+
+    // Show banner only if no choice stored
+    if (!localStorage.getItem("cookieSettings")) {
+        banner.classList.add("show");
     }
 
-    // Accept cookies
-    acceptBtn.addEventListener("click", () => {
-        localStorage.setItem("cookieConsent", "accepted");
-        banner.style.display = "none";
+    // Accept all cookies
+    acceptAllBtn.addEventListener("click", () => {
+        saveCookieSettings(true, true);
+        banner.classList.remove("show");
     });
 
-    // Deny cookies
-    denyBtn.addEventListener("click", () => {
-        localStorage.setItem("cookieConsent", "denied");
-        banner.style.display = "none";
+    // Reject all cookies
+    denyAllBtn.addEventListener("click", () => {
+        saveCookieSettings(false, false);
+        banner.classList.remove("show");
     });
+
+    // Open cookie preferences popup
+    manageBtn.addEventListener("click", () => {
+        popup.classList.add("show");
+    });
+
+    // Close popup without saving
+    closePopupBtn.addEventListener("click", () => {
+        popup.classList.remove("show");
+    });
+
+    // Save preferences
+    savePreferencesBtn.addEventListener("click", () => {
+        saveCookieSettings(
+            analyticsBox.checked,
+            marketingBox.checked
+        );
+        popup.classList.remove("show");
+        banner.classList.remove("show");
+    });
+
+    // Store in localStorage
+    function saveCookieSettings(analytics, marketing) {
+        const settings = {
+            necessary: true,
+            analytics: analytics,
+            marketing: marketing
+        };
+        localStorage.setItem("cookieSettings", JSON.stringify(settings));
+    }
 });

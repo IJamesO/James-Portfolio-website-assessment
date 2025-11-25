@@ -321,3 +321,27 @@ document.addEventListener("DOMContentLoaded", () => {
         form.reset();
     });
 });
+
+// ------------------------------------------------------
+// GDPR PRIVACY POLICY POPUP
+// ------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("privacyPopup");
+    if (!popup) return; // Only runs on index.html
+
+    const acceptBtn = document.getElementById("acceptPrivacy");
+
+    // Only show the popup if not already accepted
+    if (!localStorage.getItem("privacyAccepted")) {
+        setTimeout(() => {
+            popup.style.display = "flex";
+        }, 800);
+    }
+
+    // Accept and close popup
+    acceptBtn.addEventListener("click", () => {
+        localStorage.setItem("privacyAccepted", "true");
+        popup.style.display = "none";
+    });
+});

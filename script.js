@@ -198,3 +198,27 @@ document.addEventListener("keydown", (e) => {
     openLightbox(projectIds[currentProjectIndex]);
   }
 });
+
+// COOKIE CONSENT LOGIC ------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+    const banner = document.getElementById("cookieBanner");
+    const acceptBtn = document.getElementById("acceptCookies");
+    const denyBtn = document.getElementById("denyCookies");
+
+    // Check if cookie already set
+    if (!localStorage.getItem("cookieConsent")) {
+        banner.style.display = "block";
+    }
+
+    // Accept cookies
+    acceptBtn.addEventListener("click", () => {
+        localStorage.setItem("cookieConsent", "accepted");
+        banner.style.display = "none";
+    });
+
+    // Deny cookies
+    denyBtn.addEventListener("click", () => {
+        localStorage.setItem("cookieConsent", "denied");
+        banner.style.display = "none";
+    });
+});

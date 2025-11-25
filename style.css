@@ -412,4 +412,50 @@ input.error, textarea.error {
   color: #ff4444;
 }
 
+/* PRIVACY POLICY POPUP */
+.privacy-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.privacy-content {
+  background: #062a1c;
+  padding: 2rem;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 0 18px rgba(255, 180, 0, 0.25);
+  text-align: center;
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.privacy-content h2 {
+  margin-bottom: 1rem;
+}
+
+.policy-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #ffb400;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
 
